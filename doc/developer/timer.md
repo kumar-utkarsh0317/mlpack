@@ -33,7 +33,7 @@ of that binding.  For the sake of this discussion, let us call that object
 Each timer is given a name, and is referenced by that name.  You can call
 `timers.Start()` and `timers.Stop()` multiple times for a particular timer name,
 and the result will be the sum of the runs of the timer.  Note that
-`timers.Stop()` must be called after `timers.Start()` is called again,
+`timers.Stop()` must be called before `timers.Start()` is called again,
 otherwise a `std::runtime_error` exception will be thrown.
 
 A `"total_time"` timer is run automatically for each mlpack binding.
